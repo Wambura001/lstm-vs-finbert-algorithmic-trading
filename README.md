@@ -5,8 +5,13 @@ This repository houses the complete data science pipeline and algorithmic tradin
 The core objective of this project is to build an asymmetric, cross-border trading system. It tests whether an AI reading **South Korean textual news** can act as an early "economic warning signal" to predict price trends for **Swiss financial assets**.
 
 ---
+## Research Questions Being Addressed
+* **RQ1:** Does integrating unstructured textual sentiment from an export-driven market (South Korea) significantly boost the out-of-sample directional forecasting accuracy of a European defensive asset network?
+* **RQ2:** When subjected to realistic execution costs and liquidity constraints, does an NLP-driven predictive framework generate stable trading alpha, or do high-frequency transaction fees erode profitability?
 
-## The Core Concept (In Simple Words)
+---
+
+## The Core Concept 
 
 In global quantitative finance, South Korea is often nicknamed **"The Canary in the Coal Mine"** for the world economy. Because South Korea is a global manufacturing and technology powerhouse (producing the microchips and components everyone needs), its economy shows signs of trouble long before the rest of the world notices. 
 
@@ -67,12 +72,6 @@ pip install -r requirements.txt
 # 4. Execute the raw data ingestion script
 python src/data_pipeline/fetcher.py
 ```
-
----
-
-## Research Questions Being Addressed
-* **RQ1:** Does integrating unstructured textual sentiment from an export-driven market (South Korea) significantly boost the out-of-sample directional forecasting accuracy of a European defensive asset network?
-* **RQ2:** When subjected to realistic execution costs and liquidity constraints, does an NLP-driven predictive framework generate stable trading alpha, or do high-frequency transaction fees erode profitability?
 
 ---
 
