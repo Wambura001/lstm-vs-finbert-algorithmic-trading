@@ -4,6 +4,7 @@ This repository houses the complete data science pipeline and algorithmic tradin
 
 The core objective of this project is to build an asymmetric, cross-border trading system. It tests whether an AI reading **South Korean textual news** can act as an early "economic warning signal" to predict price trends for **Swiss financial assets**.
 
+![image](assets/img1.png)
 ---
 ## Research Questions Being Addressed
 * **RQ1:** Does integrating unstructured textual sentiment from an export-driven market (South Korea) significantly boost the out-of-sample directional forecasting accuracy of a European defensive asset network?
