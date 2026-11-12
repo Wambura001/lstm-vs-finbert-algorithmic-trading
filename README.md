@@ -8,6 +8,8 @@ This repository contains the data-processing pipeline, sentiment analysis workfl
 
 ## 1. Research Overview
 
+![image](assets/dashboard.png)
+
 ### Research question
 
 **Can Korean financial-news sentiment, combined with historical Swiss market data, improve the prediction of Swiss Market Index direction?**
