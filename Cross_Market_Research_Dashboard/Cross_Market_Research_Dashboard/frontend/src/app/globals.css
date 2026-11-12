@@ -1,0 +1,13 @@
+@import "tailwindcss";
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:#080d18;color:#e7edf7;font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+.panel{background:#101827;border:1px solid #263247;border-radius:14px}
+.muted{color:#9aa9bf}
+.kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8ea0b9}
+.metric{font-size:30px;font-weight:700;letter-spacing:-.04em}
+.navlink{display:block;padding:9px 12px;border-radius:8px;color:#aab8cc;font-size:13px}
+.navlink:hover{background:#1a2639;color:white}
+th,td{padding:11px 12px;text-align:left;border-bottom:1px solid #263247;font-size:13px}
+th{color:#95a6bf;font-weight:600}

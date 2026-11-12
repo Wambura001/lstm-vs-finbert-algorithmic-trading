@@ -1,0 +1,286 @@
+{
+  "project_title": "Cross-Market Financial Sentiment Research Dashboard",
+  "research_question": "Can Korean financial-news sentiment, combined with historical Swiss market data, improve prediction of Swiss Market Index direction?",
+  "dataset": {
+    "experimental_observations": 62,
+    "initial_train_observations": 43,
+    "walk_forward_test_observations": 19,
+    "test_start": "2026-09-28",
+    "test_end": "2026-10-22",
+    "target_positive": 34,
+    "target_non_positive": 28,
+    "feature_counts": {
+      "Market-only": 4,
+      "Market + Narrow": 6,
+      "Market + Broad": 6
+    },
+    "news_articles": {
+      "original": 6414,
+      "broad": 5356,
+      "narrow": 4680
+    },
+    "aligned_observations": 63,
+    "sentiment_model": "snunlp/KR-FinBERT-SC",
+    "lookback": 5,
+    "evaluation": "Expanding-window walk-forward; scaler fitted within each fold"
+  },
+  "metrics": {
+    "LSTM": [
+      {
+        "configuration": "Market-only",
+        "accuracy": 0.5789,
+        "precision": 0.6429,
+        "recall": 0.75,
+        "f1": 0.6923,
+        "balanced_accuracy": 0.5179,
+        "predicted_non_positive": 5,
+        "predicted_positive": 14,
+        "confusion_matrix": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            9
+          ]
+        ]
+      },
+      {
+        "configuration": "Market + Narrow",
+        "accuracy": 0.6316,
+        "precision": 0.6667,
+        "recall": 0.8333,
+        "f1": 0.7407,
+        "balanced_accuracy": 0.5595,
+        "predicted_non_positive": 4,
+        "predicted_positive": 15,
+        "confusion_matrix": [
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      {
+        "configuration": "Market + Broad",
+        "accuracy": 0.6316,
+        "precision": 0.6667,
+        "recall": 0.8333,
+        "f1": 0.7407,
+        "balanced_accuracy": 0.5595,
+        "predicted_non_positive": 4,
+        "predicted_positive": 15,
+        "confusion_matrix": [
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            10
+          ]
+        ]
+      }
+    ],
+    "Logistic Regression": [
+      {
+        "configuration": "Market-only",
+        "accuracy": 0.3684,
+        "precision": 0.5,
+        "recall": 0.4167,
+        "f1": 0.4545,
+        "balanced_accuracy": 0.3512,
+        "predicted_non_positive": 9,
+        "predicted_positive": 10
+      },
+      {
+        "configuration": "Market + Narrow",
+        "accuracy": 0.5263,
+        "precision": 0.6364,
+        "recall": 0.5833,
+        "f1": 0.6087,
+        "balanced_accuracy": 0.506,
+        "predicted_non_positive": 8,
+        "predicted_positive": 11
+      },
+      {
+        "configuration": "Market + Broad",
+        "accuracy": 0.4737,
+        "precision": 0.5833,
+        "recall": 0.5833,
+        "f1": 0.5833,
+        "balanced_accuracy": 0.4345,
+        "predicted_non_positive": 7,
+        "predicted_positive": 12
+      }
+    ],
+    "Baselines": [
+      {
+        "configuration": "Expanding majority",
+        "accuracy": 0.5789,
+        "precision": 0.6429,
+        "recall": 0.75,
+        "f1": 0.6923,
+        "balanced_accuracy": 0.5179,
+        "predicted_non_positive": 5,
+        "predicted_positive": 14
+      },
+      {
+        "configuration": "Always positive",
+        "accuracy": 0.6316,
+        "precision": 0.6316,
+        "recall": 1.0,
+        "f1": 0.7742,
+        "balanced_accuracy": 0.5,
+        "predicted_non_positive": 0,
+        "predicted_positive": 19
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "date": "2026-09-28",
+      "actual": 0,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-09-29",
+      "actual": 0,
+      "market_only": 0,
+      "narrow": 0,
+      "broad": 0
+    },
+    {
+      "date": "2026-09-30",
+      "actual": 0,
+      "market_only": 0,
+      "narrow": 0,
+      "broad": 0
+    },
+    {
+      "date": "2026-10-01",
+      "actual": 1,
+      "market_only": 0,
+      "narrow": 0,
+      "broad": 0
+    },
+    {
+      "date": "2026-10-02",
+      "actual": 1,
+      "market_only": 0,
+      "narrow": 0,
+      "broad": 0
+    },
+    {
+      "date": "2026-10-05",
+      "actual": 1,
+      "market_only": 0,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-06",
+      "actual": 1,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-07",
+      "actual": 0,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-08",
+      "actual": 1,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-09",
+      "actual": 1,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-12",
+      "actual": 1,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-13",
+      "actual": 1,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-14",
+      "actual": 1,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-15",
+      "actual": 1,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-16",
+      "actual": 0,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-19",
+      "actual": 1,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-20",
+      "actual": 1,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-21",
+      "actual": 0,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    },
+    {
+      "date": "2026-10-22",
+      "actual": 0,
+      "market_only": 1,
+      "narrow": 1,
+      "broad": 1
+    }
+  ],
+  "notes": [
+    "Classification research only; no trading strategy, execution, transaction-cost simulation, or profitability evaluation.",
+    "Narrow and broad LSTM configurations produce identical class predictions across all 19 test observations.",
+    "The always-positive baseline matches the sentiment-enhanced LSTM models' accuracy; balanced accuracy is 0.5000 for always-positive.",
+    "Daily market and sentiment time-series CSVs are not included in the accessible files for this build. The API reports these datasets as unavailable rather than fabricating chart data."
+  ]
+}
