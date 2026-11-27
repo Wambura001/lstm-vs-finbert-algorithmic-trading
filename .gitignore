@@ -18,3 +18,7 @@ out/
 # Logs
 *.log
 npm-debug.log*
+
+# Python virtual environments
+.venv/
+**/.venv/
